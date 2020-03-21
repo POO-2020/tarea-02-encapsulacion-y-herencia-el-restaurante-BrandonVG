@@ -4,10 +4,10 @@ export default class Precio{
      * @param {number} valor Valor
      */
     constructor(valor){
-        this.valor= valor;
+        this._valor= valor;
     }
     getPrecio(){
-        var numeros= this.valor;
+        var numeros= this._valor;
         var formato= new Intl.NumberFormat("en-US").format(numeros);
         return(`$${formato}`);
     }

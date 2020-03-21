@@ -7,13 +7,13 @@ export default class Cliente{
      * @param {number} telefono Numero de telefono del paciente
      */
     constructor(nombre,direccion,telefono){
-        this.nombre= nombre;
-        this.direccion= direccion;
-        this.telefono=telefono;
+        this._nombre= nombre;
+        this._direccion= direccion;
+        this._telefono=telefono;
     }
     getPerfil(){
-        var telefonoString= this.telefono.toString();
-        return (`${this.nombre}, ${this.direccion.getFormatoCorto()}, ${telefonoString.slice(0,3)}-${telefonoString.slice(3,6)}-${telefonoString.slice(6,10)}`);
+        var telefonoString= this._telefono.toString();
+        return (`${this._nombre}, ${this._direccion.getFormatoCorto()}, ${telefonoString.slice(0,3)}-${telefonoString.slice(3,6)}-${telefonoString.slice(6,10)}`);
     }
 }
 
